@@ -21,3 +21,8 @@ BOARD_USES_QCOM_FBE_DECRYPTION := true
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
+
+# HIDLs for blobs
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.recovery \
+    android.hardware.gatekeeper@1.0.recovery
