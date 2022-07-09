@@ -25,11 +25,13 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on fs
-    # Force ANDROID_ROOT to /system_root
-    export ANDROID_ROOT /system_root
+import /init.recovery.qcom_decrypt.rc
 
+on fs
     # Symlink bootdevice
     wait /dev/block/platform/${ro.boot.boot_devices}
     symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
+
+on post-fs
+    start boot-hal-1-1
 
