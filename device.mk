@@ -78,3 +78,5 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery
+
+PRODUCT_VENDOR_KERNEL_HEADERS := $(LOCAL_PATH)/kernel-headers
