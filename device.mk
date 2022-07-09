@@ -76,3 +76,5 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
     ro.build.date.utc
 
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti.recovery
