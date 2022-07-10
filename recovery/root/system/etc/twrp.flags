@@ -7,7 +7,7 @@
 /recovery        emmc       /dev/block/bootdevice/by-name/recovery                flags=backup=1;slotselect;flashimg=1
 /dtbo            emmc       /dev/block/bootdevice/by-name/dtbo                    flags=backup=1;display="Dtbo";slotselect;flashimg=1
 /vbmeta          emmc       /dev/block/bootdevice/by-name/vbmeta                  flags=backup=1;display="VBMeta";slotselect;flashimg=1
-/data            f2fs       /dev/block/bootdevice/by-name/userdata                flags=fileencryption=ice:aes-256-cts
+/data            f2fs       /dev/block/bootdevice/by-name/userdata                flags=fileencryption=ice
 /misc            emmc       /dev/block/bootdevice/by-name/misc
 /efs1            emmc       /dev/block/bootdevice/by-name/modemst1                flags=backup=1;display="EFS"
 /efs2            emmc       /dev/block/bootdevice/by-name/modemst2                flags=backup=1;subpartitionof=/efs1
@@ -31,5 +31,6 @@
 
 # Dyanmic Partitions
 system           ext4       /system                                               display="System"
+system_ext       ext4       /system_ext                                           display="System Ext"
 vendor           ext4       /vendor                                               display="Vendor"
 product          ext4       /product                                              display="Product"
