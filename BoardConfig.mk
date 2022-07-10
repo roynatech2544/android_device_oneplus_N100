@@ -95,6 +95,7 @@ BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
+TW_HAS_EDL_MODE := true
 TW_USE_TOOLBOX := true
 TW_INCLUDE_NTFS_3G := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
