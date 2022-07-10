@@ -7,10 +7,11 @@
 /recovery        emmc       /dev/block/bootdevice/by-name/recovery                flags=backup=1;slotselect;flashimg=1
 /dtbo            emmc       /dev/block/bootdevice/by-name/dtbo                    flags=backup=1;display="Dtbo";slotselect;flashimg=1
 /vbmeta          emmc       /dev/block/bootdevice/by-name/vbmeta                  flags=backup=1;display="VBMeta";slotselect;flashimg=1
-/data            f2fs       /dev/block/bootdevice/by-name/userdata                flags=fileencryption=ice
+/vbmeta_system   emmc       /dev/block/bootdevice/by-name/vbmeta_system           flags=backup=1;display="VBMeta System";slotselect;flashimg=1
 /misc            emmc       /dev/block/bootdevice/by-name/misc
 /efs1            emmc       /dev/block/bootdevice/by-name/modemst1                flags=backup=1;display="EFS"
 /efs2            emmc       /dev/block/bootdevice/by-name/modemst2                flags=backup=1;subpartitionof=/efs1
+
 # Persist
 /persist         ext4       /dev/block/bootdevice/by-name/persist                 flags=backup=1;display="Persist"
 /prodpersist     ext4       /dev/block/bootdevice/by-name/prodpersist             flags=backup=1;display="Product Persist"
@@ -20,8 +21,6 @@
 /bt_firmware     ext4       /dev/block/bootdevice/by-name/bluetooth               flags=display="Bluetooth";slotselect
 /bluetooth       emmc       /dev/block/bootdevice/by-name/bluetooth               flags=backup=1;display="Bluetooth";slotselect
 /dsp             ext4       /dev/block/bootdevice/by-name/dsp                     flags=backup=1;display="Dsp";slotselect
-/super           emmc       /dev/block/bootdevice/by-name/super                   flags=backup=1;display="Super";flashimg=1
-/metadata        ext4       /dev/block/bootdevice/by-name/metadata                flags=backup=1;display="Metadata"
 /logo            emmc       /dev/block/bootdevice/by-name/logo                    flags=backup=1;display="Boot Logo";slotselect;flashimg=1
 /keymaster       emmc       /dev/block/bootdevice/by-name/keymaster               flags=slotselect
 
@@ -29,8 +28,3 @@
 /external_sd     auto       /dev/block/mmcblk0p1    /dev/block/mmcblk0            flags=display="Micro SDcard";storage;wipeingui;removable
 /usb_otg         auto       /dev/block/sdg1         /dev/block/sdg                flags=display="USB OTG";storage;wipeingui;removable
 
-# Dyanmic Partitions
-system           ext4       /system                                               display="System"
-system_ext       ext4       /system_ext                                           display="System Ext"
-vendor           ext4       /vendor                                               display="Vendor"
-product          ext4       /product                                              display="Product"
