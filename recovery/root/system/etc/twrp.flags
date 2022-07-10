@@ -8,7 +8,6 @@
 /dtbo            emmc       /dev/block/bootdevice/by-name/dtbo                    flags=backup=1;display="Dtbo";slotselect;flashimg=1
 /vbmeta          emmc       /dev/block/bootdevice/by-name/vbmeta                  flags=backup=1;display="VBMeta";slotselect;flashimg=1
 /vbmeta_system   emmc       /dev/block/bootdevice/by-name/vbmeta_system           flags=backup=1;display="VBMeta System";slotselect;flashimg=1
-/misc            emmc       /dev/block/bootdevice/by-name/misc
 /efs1            emmc       /dev/block/bootdevice/by-name/modemst1                flags=backup=1;display="EFS"
 /efs2            emmc       /dev/block/bootdevice/by-name/modemst2                flags=backup=1;subpartitionof=/efs1
 
@@ -26,5 +25,5 @@
 
 # Removable storage
 /external_sd     auto       /dev/block/mmcblk0p1    /dev/block/mmcblk1p1          flags=display="Micro SDcard";storage;wipeingui;removable
-/usb_otg         auto       /dev/block/sdg1         /dev/block/sdg                flags=display="USB OTG";storage;wipeingui;removable
+/usb_otg         auto       /dev/block/sda1         /dev/block/sdg1               flags=display="USB OTG";storage;wipeingui;removable
 
