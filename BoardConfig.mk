@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/oneplus/OnePlusN100
+DEVICE_PATH := device/oneplus/billie2
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -24,7 +24,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := OnePlusN100
+TARGET_OTA_ASSERT_DEVICE := billie2
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true

@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_OnePlusN100.mk
+    $(LOCAL_DIR)/twrp_billie2.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_OnePlusN100-user \
-    twrp_OnePlusN100-userdebug \
-    twrp_OnePlusN100-eng
+    twrp_billie2-user \
+    twrp_billie2-userdebug \
+    twrp_billie2-eng
