@@ -52,6 +52,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Encryption: Use common FBE decryption script
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Encryption: Setup it
 PRODUCT_PACKAGES += \
     qcom_decrypt \
