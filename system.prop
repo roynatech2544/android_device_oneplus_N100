@@ -1,10 +1,6 @@
 # Device release name
 ro.display.series=Oneplus N100
 
-# product/board stuff
-ro.product.board=bengal
-ro.board.platform=bengal
-
 # USB and MTP stuff
 persist.sys.usb.config=mtp
 sys.usb.controller=4e00000.dwc3
