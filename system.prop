@@ -2,11 +2,7 @@
 ro.display.series=Oneplus N100
 
 # USB and MTP stuff
-persist.sys.usb.config=mtp
 sys.usb.controller=4e00000.dwc3
-
-# Dynamic partition
-ro.boot.dynamic_partitions=true
 
 # Encryption
 vendor.gatekeeper.disable_spu=true
