@@ -7,7 +7,9 @@ sys.usb.controller=4e00000.dwc3
 # Encryption
 vendor.gatekeeper.disable_spu=true
 
-# Crypto - Encryption
+# Crypto - FBE
+ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.options=::v2
 ro.crypto.allow_encrypt_override=true
-fbe.data.wrappedkey=true
