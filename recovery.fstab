@@ -3,9 +3,9 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
-system							/system                ext4    barrier=1,discard                                 wait,slotselect,logical
-product                                                 /product               ext4    barrier=1,discard                                 wait,slotselect,logical
-vendor                                                  /vendor                ext4    barrier=1,discard                                 wait,slotselect,logical
+system							/system                ext4    rw,barrier=1,discard                                 wait,slotselect,logical
+product                                                 /product               ext4    rw,barrier=1,discard                                 wait,slotselect,logical
+vendor                                                  /vendor                ext4    rw,barrier=1,discard                                 wait,slotselect,logical
 
 /dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard,sync                    wait,check,formattable,wrappedkey
 /dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,inlinecrypt             wait,check,formattable,quota,fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
