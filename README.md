@@ -1,6 +1,4 @@
-Copyright (C) 2022 The LineageOS Project
-
-# Device Tree for OnePlus Nord N100
+# TWRP Device Tree for OnePlus Nord N100
 
 The OnePlus Nord N100 is a mid-range smartphone from OnePlus. It was announced in October 2020 and released in November 2020.
 
@@ -25,3 +23,31 @@ The OnePlus Nord N100 is a mid-range smartphone from OnePlus. It was announced i
 | Front Camera            | 8 MP, f/2.0                                                     |
 | Fingerprint             | Rear-mounted                                                    |
 | Sensors                 | Accelerometer, Gyro, Proximity, Compass                         |
+
+
+## Compile
+
+First checkout minimal twrp with aosp tree:
+
+```
+repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo sync
+```
+
+Later, pick needed patches from gerrit/github
+
+```
+https://gerrit.twrp.me/c/android_bootable_recovery/+/5405
+https://gerrit.twrp.me/c/android_bootable_recovery/+/5670
+https://gerrit.twrp.me/c/android_bootable_recovery/+/5533
+https://github.com/HemanthJabalpuri/android_bootable_recovery/commit/6d5c365617778d107ccc6b32b55238715a06d0bc
+https://gerrit.twrp.me/c/android_system_vold/+/5540
+```
+
+Finally execute these:
+
+```
+. build/envsetup.sh
+lunch twrp_billie2-eng
+mka recoveryimage
+```
