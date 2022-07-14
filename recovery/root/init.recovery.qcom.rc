@@ -42,7 +42,7 @@ service vendor.qti.vibrator /system/bin/vendor.qti.hardware.vibrator.service
 
 on boot
     start vendor.qti.vibrator
-    setprop sys.usb.config adb
+    setprop sys.usb.config adb,mtp
 
 on init
     setprop prepdecrypt.loglevel 2
