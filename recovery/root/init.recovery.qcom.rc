@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on init
+    write /sys/class/backlight/panel0-backlight/brightness 200
+
 on fs
     # Symlink bootdevice
     wait /dev/block/platform/${ro.boot.boot_devices}
