@@ -2,7 +2,6 @@ cc_library {
     name: "librecovery_updater",
     vendor: true,
     recovery_available: true,
-    defaults: ["ufsbsg_defaults"],
     srcs: [
         "gpt-utils.cpp",
         "dec.cpp",
